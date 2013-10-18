@@ -1,0 +1,32 @@
+game: "evropa"
+date: "jaro 1900"
+units:
+  ang:
+    fleets: ["Lon", "Edi"]
+    armies: ["Lvp"]
+  fra:
+    fleets: ["Bre"]
+    armies: ["Par", "Mar"]
+  rus:
+    fleets: ["Pet (j)", "Sev"]
+    armies: ["Mos", "Var"]
+  nem:
+    fleets: ["Kie"]
+    armies: ["Ber", "Mni"]
+  ita:
+    fleets: ["Nea"]
+    armies: ["Ben", "Rim"]
+  rak:
+    fleets: ["Ter"]
+    armies: ["Vid", "Bud"]
+  tur:
+    fleets: ["Ank"]
+    armies: ["Kon", "Smy"]
+scs:
+  ang: ["Lon", "Edi", "Lvp"]
+  fra: ["Bre", "Par", "Mar"]
+  nem: ["Kie", "Ber", "Mni"]
+  ita: ["Ben", "Rim", "Nea"]
+  rak: ["Vid", "Bud", "Ter"]
+  tur: ["Kon", "Ank", "Smy"]
+  rus: ["Pet", "Mos", "Var", "Sev"]
