@@ -11,6 +11,8 @@ game = YAML.load(File.read game_path)
 svg = Nokogiri::XML::Document.new
 svg.root = svg.create_element "svg"
 svg.root["viewBox"] = "0 0 #{game["size"][0]} #{game["size"][1]}"
+svg.root["xmlns"] = "http://www.w3.org/2000/svg"
+svg.root["xmlns:xlink"] = "http://www.w3.org/1999/xlink"
 
 title_n = svg.create_element "title", "#{game["name"]} - #{state["date"]}"
 svg.root << title_n
