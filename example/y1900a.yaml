@@ -1,5 +1,5 @@
-game: "evropa"
-date: "jaro 1900"
+game: "europe"
+date: "autumn 1900"
 units:
   ang:
     fleets: ["Lon", "Edi"]
