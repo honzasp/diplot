@@ -23,25 +23,39 @@ asset_shapes:
 nations:
   eng:
     name: England
-    color: "#0000ff"
+    color: "#2580DB"
+    background: "#C1CBD6"
+    areas: ["Cly", "Edi", "Lvp", "Yor", "Wal", "Lon"]
   fra:
     name: France
-    color: "#00ffff"
+    color: "#9225DB"
+    background: "#D2C5DB"
+    areas: ["Pic", "Par", "Bur", "Mar", "Gas", "Bre"]
   ger:
     name: Germany
-    color: "#808080"
+    color: "#949494"
+    background: "#D9D9D9"
+    areas: ["Ruh", "Kie", "Mun", "Ber", "Sil", "Pru"]
   ita:
     name: Italy
-    color: "#00ff00"
+    color: "#25DB40"
+    background: "#C5DBC8"
+    areas: ["Pie", "Ven", "Tus", "Rom", "Apu", "Nap"]
   rus:
     name: Russia
-    color: "#008000"
+    color: "#DB2525"
+    background: "#DBC5C5"
+    areas: ["Fin", "Stp", "Lvn", "Mos", "Ukr", "War", "Sev"]
   aus:
     name: Austria
-    color: "#ff0000"
+    color: "#8F5215"
+    background: "#CCC2B8"
+    areas: ["Boh", "Tyr", "Tri", "Vie", "Bud", "Gal"]
   tur:
     name: Turkey
-    color: "#ffff00"
+    color: "#DBAA25"
+    background: "#DBD5C5"
+    areas: ["Con", "Ank", "Arm", "Smy", "Syr"]
 
 areas:
   - name: Norwegian Sea

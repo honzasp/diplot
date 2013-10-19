@@ -34,9 +34,12 @@ css = <<-CSS
   }
   .unowned { fill: #{s["unowned_color"]}; }
   CSS
+
 css = "\n" + css + game["nations"].map { |nation_id, nation|
-  ".nat-#{nation_id} { fill: #{nation["color"]}; }"
+  ".nat-#{nation_id} { fill: #{nation["color"]}; }\n" + \
+  ".l-#{nation_id} { fill: #{nation["background"]}; }"
 }.join("\n") + "\n"
+
 style_n = svg.create_element "style", nil, "type" => "text/css"
 style_n << svg.create_cdata(css)
 svg.root << style_n
@@ -69,6 +72,17 @@ svg.root << create_asset_node(svg, "A", game["asset_shapes"]["army"])
 svg.root << create_asset_node(svg, "F", game["asset_shapes"]["fleet"])
 svg.root << create_asset_node(svg, "SC", game["asset_shapes"]["sc"])
 
+nation_by_area = {}
+game["nations"].each do |nation_id, nation|
+  if nation["areas"]
+    nation["areas"].each do |area_id|
+      raise(ArgumentError, "Area #{area_id} belongs to two nations") \
+        if nation_by_area.has_key? area_id
+      nation_by_area[area_id] = nation_id
+    end
+  end
+end
+
 area_short_to_id = {}
 area_by_id = {}
 game["areas"].each do |area|
@@ -81,8 +95,13 @@ game["areas"].each do |area|
     "title" => area["name"],
     "id" => "area-#{area["id"]}"
 
+  nation_id = nation_by_area[area["id"]]
   shapes.each do |shape|
-    g_n << create_shape_node(svg, shape)
+    shape_n = create_shape_node(svg, shape)
+    if nation_id and shape_n["class"] == "l"
+      shape_n["class"] = "l l-#{nation_id}"
+    end
+    g_n << shape_n
   end
 
   g_n << svg.create_element("text", area["short"] || area["id"], 
