@@ -68,9 +68,11 @@ def create_asset_node(doc, id, shape_specs)
   g_n
 end
 
-svg.root << create_asset_node(svg, "A", game["asset_shapes"]["army"])
-svg.root << create_asset_node(svg, "F", game["asset_shapes"]["fleet"])
-svg.root << create_asset_node(svg, "SC", game["asset_shapes"]["sc"])
+defs_n = svg.create_element "defs"
+defs_n << create_asset_node(svg, "A", game["asset_shapes"]["army"])
+defs_n << create_asset_node(svg, "F", game["asset_shapes"]["fleet"])
+defs_n << create_asset_node(svg, "SC", game["asset_shapes"]["sc"])
+svg.root << defs_n
 
 nation_by_area = {}
 game["nations"].each do |nation_id, nation|
