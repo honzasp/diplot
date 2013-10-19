@@ -134,7 +134,7 @@ areas:
     label: [395,443]
     sc: [377,444]
     point: [395,443]
-    coasts: {"v": [410,440], "j": [399,462]}
+    coasts: {"ec": [410,440], "sc": [399,462]}
 
   - name: Burgundy
     id: Bur
@@ -371,14 +371,14 @@ areas:
     label: [85,450]
     sc: [80,432]
     point: [64,439]
-    coasts: {"s": [80,404], "j": [52,475]}
+    coasts: {"nc": [80,404], "sc": [52,475]}
 
   - name: St Petersburg
     id: Stp
     label: [460,149]
     sc: [418,187]
     point: [500,140]
-    coasts: {"s": [472,122], "j": [418,205]}
+    coasts: {"nc": [472,122], "sc": [418,205]}
 
   - name: Sweden
     id: Swe

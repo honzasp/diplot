@@ -129,8 +129,9 @@ unit_by_area.each do |area_id, info|
   nation_id, is_fleet, coast = *info
   point = 
     if coast
-      area_by_id[area_id]["coasts"][coast] ||
-        raise(ArgumentError, "Unknown coast #{coast.inspect} of #{area_short.inspect}")
+      area = area_by_id[area_id]
+      area["coasts"][coast] ||
+        raise(ArgumentError, "Unknown coast #{coast.inspect} of #{area["short"] || area["id"]}")
     else
       area_by_id[area_id]["point"]
     end

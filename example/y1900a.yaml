@@ -1,32 +1,32 @@
 game: "europe"
 date: "autumn 1900"
 units:
-  ang:
+  eng:
     fleets: ["Lon", "Edi"]
     armies: ["Lvp"]
   fra:
     fleets: ["Bre"]
     armies: ["Par", "Mar"]
   rus:
-    fleets: ["Pet (j)", "Sev"]
-    armies: ["Mos", "Var"]
-  nem:
+    fleets: ["Stp (sc)", "Sev"]
+    armies: ["Mos", "War"]
+  ger:
     fleets: ["Kie"]
-    armies: ["Ber", "Mni"]
+    armies: ["Ber", "Mun"]
   ita:
-    fleets: ["Nea"]
-    armies: ["Ben", "Rim"]
-  rak:
-    fleets: ["Ter"]
-    armies: ["Vid", "Bud"]
+    fleets: ["Nap"]
+    armies: ["Ven", "Rom"]
+  aus:
+    fleets: ["Tri"]
+    armies: ["Vie", "Bud"]
   tur:
     fleets: ["Ank"]
-    armies: ["Kon", "Smy"]
+    armies: ["Con", "Smy"]
 scs:
-  ang: ["Lon", "Edi", "Lvp"]
+  eng: ["Lon", "Edi", "Lvp"]
   fra: ["Bre", "Par", "Mar"]
-  nem: ["Kie", "Ber", "Mni"]
-  ita: ["Ben", "Rim", "Nea"]
-  rak: ["Vid", "Bud", "Ter"]
-  tur: ["Kon", "Ank", "Smy"]
-  rus: ["Pet", "Mos", "Var", "Sev"]
+  ger: ["Kie", "Ber", "Mun"]
+  ita: ["Ven", "Rom", "Nap"]
+  aus: ["Vie", "Bud", "Tri"]
+  tur: ["Con", "Ank", "Smy"]
+  rus: ["Stp", "Mos", "War", "Sev"]
